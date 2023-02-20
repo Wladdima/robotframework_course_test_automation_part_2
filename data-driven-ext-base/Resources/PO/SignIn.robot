@@ -18,8 +18,8 @@ Navigate To
 
 Enter Credentials
     [Arguments]  ${Credentials}
-    Type Text  ${SIGN_IN_EMAIL}  ${Credentials.Email}
-    Type Text  ${SIGN_IN_PASSWORD}  ${Credentials.Password}
+    Type Text  ${SIGN_IN_EMAIL}  ${Credentials[0]}
+    Type Text  ${SIGN_IN_PASSWORD}  ${Credentials[1]}
     #run keyword unless  '${Credentials.Password}' == '#BLANK'  
 
 Click Submit
@@ -27,7 +27,7 @@ Click Submit
 
 Verify Error Message
     [Arguments]  ${Credentials}
-    Get Text    ${Credentials.ErrorMessage}  contains  ${Credentials.ExpectedErrorMessage}
+    Get Text    ${Credentials[2]}  contains  ${Credentials[3]}
 
 Clear Input Fields
     Clear Text  ${SIGN_IN_EMAIL}

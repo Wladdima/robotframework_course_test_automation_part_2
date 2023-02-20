@@ -1,0 +1,3 @@
+admin@robotframeworktutorial.com,12345678,css=p.sds-notification__desc,Your email or password was not recognized. Try again soon.
+bryan@bryanlamb.com,TestPassword!,css=p.sds-notification__desc,Your email or password was not recognized. Try again soon.
+,,css=div.sds-field[slot="emailField"] > span.sds-helper-text,Enter your email.

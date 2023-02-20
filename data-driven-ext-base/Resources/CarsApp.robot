@@ -2,6 +2,15 @@
 Resource  ../Resources/PO/SignIn.robot
 
 *** Keywords ***
+Login With Many Invalid Credentials
+    [Arguments]   ${InvalidLoginScenaries}
+
+    FOR    ${LoginScenario}    IN    @{InvalidLoginScenaries}
+        Navigate to Sign In Page    
+        Attempt Login           ${LoginScenario}
+        Verify Error Message    ${LoginScenario}
+    END
+
 Test Multiple Login Scenaries
     [Arguments]    ${Credentials}
     Navigate to Sign In Page
